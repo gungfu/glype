@@ -28,7 +28,8 @@ define('SCRIPT_NAME', 'browse.php');
 define('COOKIE_PREFIX', 'c');
 
 // Running on HTTPS?
-define('HTTPS', ( empty($_SERVER['HTTPS']) || strtolower($_SERVER['HTTPS']) == 'off' ? false : true ));
+//define('HTTPS', ( empty($_SERVER['HTTPS']) || strtolower($_SERVER['HTTPS']) == 'off' ? false : true ));
+define('HTTPS', true);
 
 // Running in safe_mode?
 define('SAFE_MODE', ini_get('safe_mode'));
