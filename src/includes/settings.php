@@ -29,7 +29,7 @@ $CONFIG['tmp_dir'] = GLYPE_ROOT . '/tmp/';
 
 // Use GZIP compression when sending pages back to the user. This reduces
 // bandwidth usage but at the cost of increased CPU load.
-$CONFIG['gzip_return'] = false;
+$CONFIG['gzip_return'] = true;
 
 // Warn users before browsing a secure site if on an unsecure connection
 $CONFIG['ssl_warning'] = true;
@@ -38,7 +38,7 @@ $CONFIG['ssl_warning'] = true;
 // properly proxified is to override the native javascript functions
 // with our own. However, this may interfere with any other
 // javascript added to the page, such as ad codes.
-$CONFIG['override_javascript'] = false;
+$CONFIG['override_javascript'] = true;
 
 // Load limiter. This attempts to fetch the server load and the script stops
 // serving pages whenever we go over the limit. Set to 0 to disable.
@@ -163,7 +163,7 @@ $CONFIG['connection_timeout'] = 5;
 $CONFIG['transfer_timeout'] = 0;
 
 // Allow resuming of transfers
-$CONFIG['resume_transfers'] = false;
+$CONFIG['resume_transfers'] = true;
 
 // Maximum filesize permitted for downloads through the proxy (bytes) [0 for no limit]
 $CONFIG['max_filesize'] = 0;
@@ -172,7 +172,7 @@ $CONFIG['max_filesize'] = 0;
 $CONFIG['download_speed_limit'] = 0;
 
 // Queue transfers up so we only have one transfer running at a time per user
-$CONFIG['queue_transfers'] = true;
+$CONFIG['queue_transfers'] = false;
 
 
 /*****************************************************************
@@ -255,7 +255,7 @@ $CONFIG['options'] = array(
                            'force'   => true),
                            
    'stripJS'      =>	array('title'   => 'Remove Scripts',
-                           'default' => true,
+                           'default' => false,
                            'desc'    => 'Remove scripts to protect your anonymity and speed up page loads. However, not all sites will provide an HTML-only alternative. (Recommended)',
                            'force'   => false),
                            
